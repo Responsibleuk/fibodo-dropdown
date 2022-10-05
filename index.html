@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Starty - Multipurpose HTML5 Tamplate</title>
+        <title>Golf | fibodo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
         <meta name="keywords" content="Startup, Business, Multi-uses, HTML, Clean, Modern, Creative" />
@@ -13,9 +13,11 @@
         <meta name="Version" content="v1.0.0" />
         <!-- favicon -->
         <link href="images/favicon.ico" rel="shortcut icon">
-        <!-- Bootstrap -->
+        <!-- Bootstrap and other css -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- Icons -->
+        <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/tiny-slider.css" rel="stylesheet" type="text/css" />
         <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
         <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
         <!-- Main Css -->
@@ -23,1211 +25,850 @@
 
     </head>
 
-    <body>
+    <body>        
         <!-- Navbar STart -->
         <header id="topnav" class="defaultscroll sticky">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="px-lg-5 mx-lg-5">
-                            <!-- Logo container-->
-                            <a class="logo" href="index.html">
-                                <img src="images/logo-dark.png" height="28" alt="">
-                            </a>
-                            
-                            <!-- Logo End -->
-
-                            <!-- End Logo container-->
-                            <div class="menu-extras">
-                                <div class="menu-item">
-                                    <!-- Mobile menu toggle-->
-                                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                                        <div class="lines">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </a>
-                                    <!-- End mobile menu toggle-->
-                                </div>
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="index.html">
+                    <span class="logo-light-mode">
+                        <img src="images/logo-dark.png" class="l-dark" alt="">
+                        <img src="images/logo-light.png" class="l-light" alt="">
+                    </span>
+                    <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+                </a>
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-
-                            <!--Login button Start-->
-                            <ul class="buy-button list-inline mb-0">                    
-                                <li class="list-inline-item ps-1 mb-0">
-                                    <a href="https://1.envato.market/starty" target="_blank">
-                                        <div class="btn btn-primary">Download</div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!--Login button End-->
-                    
-                            <div id="navigation">
-                                <!-- Navigation Menu-->   
-                                <ul class="navigation-menu nav-right" id="navmenu-nav">
-                                    <li class="has-submenu">
-                                        <a href="#home">Home</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#demos">Demos</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#service">Features</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#inner">Inner pages</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="https://themeforest.net/item/starty-bootstrap-5-multipurpose-template/33324796/support" target="_blank">Support</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="https://forms.gle/QkTueCikDGqJnbky9" target="_blank">Hire us</a>
-                                    </li>
-                                    <!-- <li class="has-submenu">
-                                        <a href="#contact">Contact Us</a>
-                                    </li> -->
-                                </ul><!--end navigation menu-->
-                            </div><!--end navigation-->
-                        </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
                     </div>
                 </div>
+
+                <ul class="buy-button list-inline mb-0">
+                    <li class="list-inline-item search-icon mb-0">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-link text-decoration-none dropdown-toggle mb-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="uil uil-search h5 text-dark nav-light-icon-dark mb-0"></i>
+                                <i class="uil uil-search h5 text-white nav-light-icon-white mb-0"></i>
+                            </button>
+                            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-4 py-0" style="width: 300px;">
+                                <form class="p-4">
+                                    <input type="text" id="text" name="name" class="form-control border bg-white" placeholder="Search...">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu nav-light">
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Feature</a><span class="menu-arrow"></span>
+                            <ul class="submenu megamenu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-startup.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/startup.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i> Startups</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-business.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/business.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-presentation-line menu-list-icon align-middle me-1"></i> Business</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-corporate.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/corporate.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-chart-pie menu-list-icon align-middle me-1"></i> Corporate</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-finance.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/finance.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-analytics menu-list-icon align-middle me-1"></i> Finance</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-application.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/application.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-mobile-android menu-list-icon align-middle me-1"></i> Application</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-saas.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/saas.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-airplay menu-list-icon align-middle me-1"></i> Saas</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-seo.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/seo.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-clapper-board menu-list-icon align-middle me-1"></i> SEO Agency</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-marketing.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/marketing.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-process menu-list-icon align-middle me-1"></i> Marketing</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-event.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/event.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-post-stamp menu-list-icon align-middle me-1"></i> Event</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-crypto.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/crypto.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-bitcoin-circle menu-list-icon align-middle me-1"></i> Cryptocurrency</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-restaurant.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/restaurant.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-restaurant menu-list-icon align-middle me-1"></i> Restaurant</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-cafe.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/cafe.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-coffee menu-list-icon align-middle me-1"></i> Cafe</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-personal.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/personal.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-user menu-list-icon align-middle me-1"></i> Personal</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-portfolio.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/portfolio.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-image-v menu-list-icon align-middle me-1"></i> Portfolio</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-freelancer.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/freelancer.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-brackets-curly menu-list-icon align-middle me-1"></i> Freelancer</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-charity.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/charity.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-thumbs-up menu-list-icon align-middle me-1"></i> Charity</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-personal-blog.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/blog.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-document-layout-left menu-list-icon align-middle me-1"></i> Personal Blog</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-fashion.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/fashion.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-shopping-bag menu-list-icon align-middle me-1"></i> fashion</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-onepage.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/application.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-book menu-list-icon align-middle me-1"></i> App (Onepage)</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>   
+                            </ul>
+                        </li>
+        
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-aboutus.html" class="sub-menu-item">About Us</a></li>
+                                <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a><span class="submenu-arrow"></span>
+                                    <ul class="submenu">
+                                        <li><a href="page-services.html" class="sub-menu-item">Services</a></li>
+                                        <li><a href="page-services-two.html" class="sub-menu-item">Services Two</a></li>
+                                        <li><a href="page-single-service.html" class="sub-menu-item">Single Service </a></li>
+                                    </ul> 
+                                </li>
+                                <li><a href="page-faqs.html" class="sub-menu-item">FAQs</a></li>
+                                <li><a href="page-pricing.html" class="sub-menu-item">Pricing</a></li>
+                                <li><a href="page-team.html" class="sub-menu-item">Team</a></li>                                
+                                <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Shop</a><span class="submenu-arrow"></span>
+                                    <ul class="submenu">
+                                        <li><a href="shop-grids.html" class="sub-menu-item">Product Grids</a></li>
+                                        <li><a href="shop-product-detail.html" class="sub-menu-item">Product Details</a></li>
+                                        <li><a href="shop-cart.html" class="sub-menu-item">Shop Cart</a></li>
+                                        <li><a href="shop-checkout.html" class="sub-menu-item">Checkouts</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Special</a><span class="submenu-arrow"></span>
+                                    <ul class="submenu">
+                                        <li><a href="page-comingsoon.html" class="sub-menu-item">Coming Soon</a></li>
+                                        <li><a href="page-maintenance.html" class="sub-menu-item">Maintenance</a></li>
+                                        <li><a href="page-error.html" class="sub-menu-item">Error</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-elements.html" class="sub-menu-item">Components</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Modules</a><span class="menu-arrow"></span>
+                            <ul class="submenu megamenu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-startup.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/startup.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i> Startups</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-business.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/business.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-presentation-line menu-list-icon align-middle me-1"></i> Business</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-corporate.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/corporate.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-chart-pie menu-list-icon align-middle me-1"></i> Corporate</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-finance.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/finance.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-analytics menu-list-icon align-middle me-1"></i> Finance</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-application.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/application.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-mobile-android menu-list-icon align-middle me-1"></i> Application</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-saas.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/saas.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-airplay menu-list-icon align-middle me-1"></i> Saas</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-seo.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/seo.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-clapper-board menu-list-icon align-middle me-1"></i> SEO Agency</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-marketing.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/marketing.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-process menu-list-icon align-middle me-1"></i> Marketing</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-event.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/event.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-post-stamp menu-list-icon align-middle me-1"></i> Event</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-crypto.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/crypto.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-bitcoin-circle menu-list-icon align-middle me-1"></i> Cryptocurrency</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-restaurant.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/restaurant.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-restaurant menu-list-icon align-middle me-1"></i> Restaurant</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-cafe.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/cafe.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-coffee menu-list-icon align-middle me-1"></i> Cafe</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-personal.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/personal.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-user menu-list-icon align-middle me-1"></i> Personal</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-portfolio.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/portfolio.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-image-v menu-list-icon align-middle me-1"></i> Portfolio</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-freelancer.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/freelancer.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-brackets-curly menu-list-icon align-middle me-1"></i> Freelancer</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="index-charity.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/charity.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-thumbs-up menu-list-icon align-middle me-1"></i> Charity</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-personal-blog.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/blog.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-document-layout-left menu-list-icon align-middle me-1"></i> Personal Blog</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-fashion.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/fashion.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-shopping-bag menu-list-icon align-middle me-1"></i> fashion</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-onepage.html" class="sub-menu-item">
+                                                <div class="text-lg-center">
+                                                    <span class="d-none d-lg-block"><img src="images/demos/application.png" class="img-fluid rounded shadow-md" alt=""></span>
+                                                    <span class="mt-lg-2 d-block"><i class="uil uil-book menu-list-icon align-middle me-1"></i> App (Onepage)</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>   
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Portfolio</a><span class="menu-arrow"></span>
+                            <ul class="submenu megamenu">
+                                <li>
+                                    <ul>
+                                        <li class="megamenu-head">Classic Portfolio</li>
+                                        <li><a href="portfolio-classic-two.html" class="sub-menu-item">Two Column</a></li>
+                                        <li><a href="portfolio-classic-three.html" class="sub-menu-item">Three Column</a></li>
+                                        <li><a href="portfolio-classic-four.html" class="sub-menu-item">Four Column</a></li>
+                                        <li><a href="portfolio-classic-five.html" class="sub-menu-item">Five Column</a></li>
+                                        <li><a href="portfolio-classic-six.html" class="sub-menu-item">Six Column</a></li>
+                                        <li><a href="portfolio-classic-sidebar.html" class="sub-menu-item">Portfolio Sidebar</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li class="megamenu-head">Creative Portfolio</li>
+                                        <li><a href="portfolio-creative-two.html" class="sub-menu-item">Two Column</a></li>
+                                        <li><a href="portfolio-creative-three.html" class="sub-menu-item">Three Column</a></li>
+                                        <li><a href="portfolio-creative-four.html" class="sub-menu-item">Four Column</a></li>
+                                        <li><a href="portfolio-creative-five.html" class="sub-menu-item">Five Column</a></li>
+                                        <li><a href="portfolio-creative-six.html" class="sub-menu-item">Six Column</a></li>
+                                        <li><a href="portfolio-creative-sidebar.html" class="sub-menu-item">Portfolio Sidebar</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li class="megamenu-head">Modern Portfolio</li>
+                                        <li><a href="portfolio-modern-two.html" class="sub-menu-item">Two Column</a></li>
+                                        <li><a href="portfolio-modern-three.html" class="sub-menu-item">Three Column</a></li>
+                                        <li><a href="portfolio-modern-four.html" class="sub-menu-item">Four Column</a></li>
+                                        <li><a href="portfolio-modern-five.html" class="sub-menu-item">Five Column</a></li>
+                                        <li><a href="portfolio-modern-six.html" class="sub-menu-item">Six Column</a></li>
+                                        <li><a href="portfolio-modern-sidebar.html" class="sub-menu-item">Portfolio Sidebar</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li class="megamenu-head">Masonry Portfolio</li>
+                                        <li><a href="portfolio-masonry-two.html" class="sub-menu-item">Two Column</a></li>
+                                        <li><a href="portfolio-masonry-three.html" class="sub-menu-item">Three Column</a></li>
+                                        <li><a href="portfolio-masonry-four.html" class="sub-menu-item">Four Column</a></li>
+                                        <li><a href="portfolio-masonry-five.html" class="sub-menu-item">Five Column</a></li>
+                                        <li><a href="portfolio-masonry-six.html" class="sub-menu-item">Six Column</a></li>
+                                        <li><a href="portfolio-masonry-sidebar.html" class="sub-menu-item">Portfolio Sidebar</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <ul>
+                                        <li class="megamenu-head">Portfolio Detail</li>
+                                        <li><a href="portfolio-detail-one.html" class="sub-menu-item">Portfolio One</a></li>
+                                        <li><a href="portfolio-detail-two.html" class="sub-menu-item">Portfolio Two</a></li>
+                                        <li><a href="portfolio-detail-three.html" class="sub-menu-item">Portfolio Three</a></li>
+                                        <li><a href="portfolio-detail-four.html" class="sub-menu-item">Portfolio Four</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Blogs</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Blog</a><span class="submenu-arrow"></span>
+                                    <ul class="submenu">
+                                        <li><a href="blog-grid.html" class="sub-menu-item">Blog Grids</a></li>
+                                        <li><a href="blog-masonry.html" class="sub-menu-item">Blog Masonry</a></li>
+                                        <li><a href="blog-list.html" class="sub-menu-item">Blog List</a></li>
+                                        <li><a href="blog-grid-sidebar.html" class="sub-menu-item">Blog-Sidebar</a></li>
+                                        <li><a href="blog-masonry-sidebar.html" class="sub-menu-item">Blog Masonry-sidebar</a></li>
+                                        <li><a href="blog-list-sidebar.html" class="sub-menu-item">Blog List-Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Image Blog</a><span class="submenu-arrow"></span>
+                                    <ul class="submenu">
+                                        <li><a href="blog-image-grid.html" class="sub-menu-item">Blog Grids</a></li>
+                                        <li><a href="blog-image-masonry.html" class="sub-menu-item">Blog Masonry</a></li>
+                                        <li><a href="blog-image-grid-sidebar.html" class="sub-menu-item">Blog-Sidebar</a></li>
+                                        <li><a href="blog-image-masonry-sidebar.html" class="sub-menu-item">Blog Masonry-sidebar</a></li>
+                                    </ul> 
+                                </li>
+                                <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Blog Detail </a><span class="submenu-arrow"></span>
+                                    <ul class="submenu">
+                                        <li><a href="blog-detail-one.html" class="sub-menu-item">Blog Detail One</a></li>
+                                        <li><a href="blog-detail-two.html" class="sub-menu-item">Blog Detail Two</a></li>
+                                        <li><a href="blog-detail-three.html" class="sub-menu-item">Blog Detail Three</a></li>
+                                        <li><a href="blog-detail-four.html" class="sub-menu-item">Blog Detail Four</a></li>
+                                        <li><a href="blog-detail-five.html" class="sub-menu-item">Blog Detail Five</a></li>
+                                    </ul>  
+                                </li>
+                                <li><a href="blog-author.html" class="sub-menu-item">Author</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="page-contact.html" class="sub-menu-item">Contact us</a></li>
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
             </div><!--end container-->
         </header><!--end header-->
         <!-- Navbar End -->
 
-        <!-- Start -->
-        <section class="bg-half-170 pb-0" id="home" style="background: url('images/bg/live.png') top right;">
-            <div class="container-fluid">
-                <div class="row mt-5 justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <div class="title-heading">
-                            <img src="images/logo-icon.png" height="80" alt="">
-                            <h4 class="display-6 fw-semibold my-4">Create a powerfull websites <br> for <span id="typed" class="fw-semibold text-primary"></span></h4>
-                            <h2 class="fw-semibold text-danger my-4">( Light + Dark Versions )</h2>
-                            <p class="text-muted mx-auto para-desc pb-md-5 mb-5">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
-                        
-                            <img src="images/demos/live/home.png" alt="" class="img-fluid">
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- End -->
+        <!-- Hero Start -->
+        <section class="swiper-slider-hero position-relative d-block vh-100">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide d-flex align-items-center overflow-hidden">
+                        <div class="slide-inner slide-bg-image d-flex align-items-center" data-jarallax='{"speed": 0.5}' style="background: center center;" data-background="images/bg/busi01.jpg">
+                            <div class="bg-overlay bg-linear-gradient"></div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="title-heading text-center">
+                                            <h1 class="fw-semibold display-3 text-white title-dark mb-4">Build and Grow Your Business</h1>
+                                            <p class="para-desc mx-auto text-white-50">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                                            
+                                            <div class="mt-4 pt-2">
+                                                <a href="page-services.html" class="btn btn-primary">See Services</a>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end container-->
+                        </div><!-- end slide-inner --> 
+                    </div> <!-- end swiper-slide -->
 
-        <!-- Start -->
-        <section class="section pb-0" id="demos">
-            <div class="position-relative">
-                <div class="attach-icons-hero text-center py-md-5 py-lg-0">
-                    <a href="javascript:void(0)"><img src="images/demos/live/bootstrap2.png" class="img-fluid avatar avatar-md-md my-2 my-sm-0 mx-2 p-2 bg-white rounded-circle shadow" data-bs-toggle="tooltip" data-placement="top" title="Bootstrap 5" alt=""></a>
-                    <a href="javascript:void(0)"><img src="images/demos/live/scss2.png" class="img-fluid avatar avatar-md-md my-2 my-sm-0 mx-2 p-2 bg-white rounded-circle shadow" data-bs-toggle="tooltip" data-placement="top" title="SASS" alt=""></a>
-                    <a href="javascript:void(0)"><img src="images/demos/live/html2.png" class="img-fluid avatar avatar-md-md my-2 my-sm-0 mx-2 p-2 bg-white rounded-circle shadow" data-bs-toggle="tooltip" data-placement="top" title="HTML" alt=""></a>
-                    <a href="javascript:void(0)"><img src="images/demos/live/css2.png" class="img-fluid avatar avatar-md-md my-2 my-sm-0 mx-2 p-2 bg-white rounded-circle shadow" data-bs-toggle="tooltip" data-placement="top" title="CSS" alt=""></a>
-                    <a href="javascript:void(0)"><img src="images/demos/live/w3c2.png" class="img-fluid avatar avatar-md-md my-2 my-sm-0 mx-2 p-2 bg-white rounded-circle shadow" data-bs-toggle="tooltip" data-placement="top" title="W3c valid" alt=""></a>
-                    <a href="javascript:void(0)"><img src="images/demos/live/ui2.png" class="img-fluid avatar avatar-md-md my-2 my-sm-0 mx-2 p-2 bg-white rounded-circle shadow" data-bs-toggle="tooltip" data-placement="top" title="Ui Kit" alt=""></a>
+                    <div class="swiper-slide d-flex align-items-center overflow-hidden">
+                        <div class="slide-inner slide-bg-image d-flex align-items-center" data-jarallax='{"speed": 0.5}' style="background: center center;" data-background="images/bg/busi02.jpg">
+                            <div class="bg-overlay bg-linear-gradient"></div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="title-heading text-center">
+                                            <h1 class="fw-semibold display-3 text-white title-dark mb-4">Take Care of Your Future</h1>
+                                            <p class="para-desc mx-auto text-white-50">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                                            
+                                            <div class="mt-4 pt-2">
+                                                <a href="page-aboutus.html" class="btn btn-primary">Get Started</a>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end container-->
+                        </div><!-- end slide-inner --> 
+                    </div> <!-- end swiper-slide -->
+
+                    <div class="swiper-slide d-flex align-items-center overflow-hidden">
+                        <div class="slide-inner slide-bg-image d-flex align-items-center" data-jarallax='{"speed": 0.5}' style="background: center center;" data-background="images/bg/busi03.jpg">
+                            <div class="bg-overlay bg-linear-gradient"></div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="title-heading text-center">
+                                            <h1 class="fw-semibold display-3 text-white title-dark mb-4">Let's Start With Starty</h1>
+                                            <p class="para-desc mx-auto text-white-50">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                                            
+                                            <div class="mt-4 pt-2">
+                                                <a href="page-contact.html" class="btn btn-primary">Contact us</a>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div><!--end container-->
+                        </div><!-- end slide-inner --> 
+                    </div> <!-- end swiper-slide -->
                 </div>
-            </div>
+                <!-- end swiper-wrapper -->
 
-            <div class="container-fluid mt-100 mt-60">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="px-lg-5 mx-lg-5">
-                            <div class="row justify-content-center mb-0">
-                                <div class="col-12">
-                                    <div class="section-title text-center">
-                                        <h4 class="title mb-0">Template Demos</h4>
-                                    </div>
-                                </div>
-                            </div><!--end row-->
-
-                            <div class="row justify-content-center">
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-startup.html" target="_blank">
-                                            <img src="images/demos/live/startup.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-startup.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Startup</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-business.html" target="_blank">
-                                            <img src="images/demos/live/business.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-business.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Business</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-corporate.html" target="_blank">
-                                            <img src="images/demos/live/corporate.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-corporate.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Corporate</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-finance.html" target="_blank">
-                                            <img src="images/demos/live/finance.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-finance.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Finance</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-application.html" target="_blank">
-                                            <img src="images/demos/live/application.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-application.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Applications</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-saas.html" target="_blank">
-                                            <img src="images/demos/live/saas.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-saas.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Saas</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-seo.html" target="_blank">
-                                            <img src="images/demos/live/seo.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-seo.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">SEO Agency</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-marketing.html" target="_blank">
-                                            <img src="images/demos/live/marketing.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-marketing.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Marketing Agency</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-event.html" target="_blank">
-                                            <img src="images/demos/live/event.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-event.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Event / Conference</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-crypto.html" target="_blank">
-                                            <img src="images/demos/live/crypto.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-crypto.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Cryptocurrency</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-restaurant.html" target="_blank">
-                                            <img src="images/demos/live/restaurant.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-restaurant.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Restaurant</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-cafe.html" target="_blank">
-                                            <img src="images/demos/live/cafe.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-cafe.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Cafe</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-personal.html" target="_blank">
-                                            <img src="images/demos/live/personal.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-personal.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Personal</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-portfolio.html" target="_blank">
-                                            <img src="images/demos/live/portfolio.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-portfolio.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Portfolio</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-freelancer.html" target="_blank">
-                                            <img src="images/demos/live/freelancer.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-freelancer.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Freelancer</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-charity.html" target="_blank">
-                                            <img src="images/demos/live/charity.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-charity.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Charity</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-personal-blog.html" target="_blank">
-                                            <img src="images/demos/live/blog.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-personal-blog.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Personal Blog</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-fashion.html" target="_blank">
-                                            <img src="images/demos/live/fashion.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-fashion.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Fashion</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-4 col-md-6 col-12 picture-item mt-100 mt-60">
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-lg-4 px-md-2">
-                                        <a href="index-onepage.html" target="_blank">
-                                            <img src="images/demos/live/onepage.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="index-onepage.html" target="_blank" class="text-dark fs-5 fw-medium mb-0 d-block title text-uppercase">Onepage</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
+                <!-- swipper controls -->
+                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-button-next border rounded-circle text-center"></div>
+                <div class="swiper-button-prev border rounded-circle text-center"></div>
             </div><!--end container-->
         </section><!--end section-->
-        <!-- End -->
+        <!-- Hero End -->
 
-        <!-- Start -->
-        <section class="section" id="service">
+        <!-- Start services -->
+        <section class="section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <div class="section-title mb-4 pb-2 text-center">
-                            <h4 class="title mb-0">Template Features</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-bootstrap"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Bootstrap 5</h6>
-                            </div>
+                        <div class="section-title text-center mb-4 pb-2">
+                            <h4 class="title fw-semibold mb-3">Features</h4>
+                            <p class="text-muted para-desc mx-auto mb-0">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
                         </div>
                     </div><!--end col-->
+                </div><!--end row-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
+                <div class="row">
+                    <div class="col-lg-4 mt-4 pt-2">
+                        <div class="features feature-primary feature-bg border-0 p-4 rounded shadow">
+                            <div class="fea-icon rounded text-white title-dark">
                                 <i class="uil uil-airplay"></i>
                             </div>
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Fully Responsive</h6>
+                            <div class="content mt-3">
+                                <a href="page-single-service.html" class="title h5 text-dark">Responsive Design</a>
+                                <p class="text-muted para mt-2 mb-0">This prevents repetitive patterns from impairing the overall facilitates the comparison.</p>
                             </div>
                         </div>
                     </div><!--end col-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="uil uil-browser"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Browser Compatibility</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="features feature-primary feature-bg border-0 p-4 rounded shadow">
+                            <div class="fea-icon rounded text-white title-dark">
                                 <i class="uil uil-eye"></i>
                             </div>
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Retina Ready</h6>
+                            <div class="content mt-3">
+                                <a href="page-single-service.html" class="title h5 text-dark">Retina Ready Graphics</a>
+                                <p class="text-muted para mt-2 mb-0">This prevents repetitive patterns from impairing the overall facilitates the comparison.</p>
                             </div>
                         </div>
                     </div><!--end col-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i data-feather="feather" class="fea icon-ex-md"></i>
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="features feature-primary feature-bg border-0 p-4 rounded shadow">
+                            <div class="fea-icon rounded text-white title-dark">
+                                <i class="uil uil-tachometer-fast-alt"></i>
                             </div>
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Feather Icons</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-cube-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Material Design Icon</h6>
+                            <div class="content mt-3">
+                                <a href="page-single-service.html" class="title h5 text-dark">Powerful Performance</a>
+                                <p class="text-muted para mt-2 mb-0">This prevents repetitive patterns from impairing the overall facilitates the comparison.</p>
                             </div>
                         </div>
                     </div><!--end col-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-vector-bezier"></i>
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="features feature-primary feature-bg border-0 p-4 rounded shadow">
+                            <div class="fea-icon rounded text-white title-dark">
+                                <i class="uil uil-palette"></i>
                             </div>
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Flaticon Icon</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-sass"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Built With SASS</h6>
+                            <div class="content mt-3">
+                                <a href="page-single-service.html" class="title h5 text-dark">Unlimited Color Options</a>
+                                <p class="text-muted para mt-2 mb-0">This prevents repetitive patterns from impairing the overall facilitates the comparison.</p>
                             </div>
                         </div>
                     </div><!--end col-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-check-decagram"></i>
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="features feature-primary feature-bg border-0 p-4 rounded shadow">
+                            <div class="fea-icon rounded text-white title-dark">
+                                <i class="uil uil-font"></i>
                             </div>
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">W3c Valid Code</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="uil uil-cog"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Easy to customize</h6>
+                            <div class="content mt-3">
+                                <a href="page-single-service.html" class="title h5 text-dark">Customizable Fonts</a>
+                                <p class="text-muted para mt-2 mb-0">This prevents repetitive patterns from impairing the overall facilitates the comparison.</p>
                             </div>
                         </div>
                     </div><!--end col-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-language-php"></i>
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="features feature-primary feature-bg border-0 p-4 rounded shadow">
+                            <div class="fea-icon rounded text-white title-dark">
+                                <i class="uil uil-file-upload-alt"></i>
                             </div>
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Working Contact Form</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-file-image"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Free Illustrator Image</h6>
+                            <div class="content mt-3">
+                                <a href="page-single-service.html" class="title h5 text-dark">Free Updates</a>
+                                <p class="text-muted para mt-2 mb-0">This prevents repetitive patterns from impairing the overall facilitates the comparison.</p>
                             </div>
                         </div>
                     </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="uil uil-camera"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Free Images</h6>
-                            </div>
-                        </div>
+            <div class="container mt-100 mt-60">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <img src="images/about02.jpg" class="img-fluid rounded shadow" alt="">
                     </div><!--end col-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-google-glass"></i>
-                            </div>
+                    <div class="col-lg-7 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <div class="section-title ms-lg-5">
+                            <h4 class="title fw-semibold mb-3">Apps</h4>
+                            <p class="text-muted para-desc mb-0">The advantage of its Latin origin and the relative meaninglessness of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's attention from the layout.</p>
+                        
+                            <div class="row mt-4">
+                                <div class="col-lg-6 col-12">
+                                    <ul class="mb-0 list-unstyled">
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Fully Responsive</li>
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Finance & Restructuring </li>
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Audit & Assurance </li>
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Trades & Stock Market </li>
+                                    </ul>
+                                </div><!--end col-->
 
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Free Google Fonts</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
+                                <div class="col-lg-6 col-12">
+                                    <ul class="mb-0 list-unstyled">
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Strategy & Planning </li>
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Software & Research </li>
+                                        <li class="mb-0"><span class="text-primary h4 me-2"><i class="uil uil-check-circle align-middle"></i></span> Support & Maintenance </li>
+                                    </ul>
+                                </div><!--end col-->
+                            </div><!--end row-->
 
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-code-braces"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Well Commented Code</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-code-tags"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Clean Code</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-update"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Free Updates</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-account-heart-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Developer Friendly</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-animation"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Animations</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-gesture-tap-button"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Buttons</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-comment-quote"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Blockquotes</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-arrow-right-drop-circle-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Call To Action</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-view-carousel-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Carousel</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-email-newsletter"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Newsletter</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-frequently-asked-questions"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">FAQs</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-image-multiple"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Galleries</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-tooltip-image-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Lightbox</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-video-vintage"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Media Embeds</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-play-network-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Modals</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-menu"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Accordion</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-arrow-split-horizontal"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Parallax</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-file-table"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Pricing Tables</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-debug-step-over"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Process Steps</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-folder-multiple-image"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Portfolio</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-cart-outline"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">e-Commerce</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-facebook"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Social Icons</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-view-carousel"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Testimonials</h6>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col mt-4 pt-2">
-                        <div class="card features feature-primary features-classic p-4 text-center rounded-md shadow border-0">
-                            <div class="fea-icon bg-soft rounded-md mx-auto">
-                                <i class="mdi mdi-file-document"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h6 class="mb-0">Documentation</h6>
+                            <div class="mt-4">
+                                <a href="javascript:void(0)" class="btn btn-primary">Read More <i class="uil uil-arrow-right align-middle"></i></a>
                             </div>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
         </section><!--end section-->
-        <!-- End -->
+        <!-- End services -->
 
-        <section class="section pt-0 pb-0" id="inner">
-            <div class="container">
-                <div class="row">
+        
+
+            <div class="container mt-100 mt-60">
+                <div class="row justify-content-center">
                     <div class="col-12">
-                        <div class="position-relative" style="z-index: 1;">
-                            <div class="position-relative">
-                                <img src="images/demos/live/lapy.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="content mt-4 pt-2">
-                                <div class="row justify-content-center">
-                                    <div class="col-12">
-                                        <div class="section-title my-4 py-2 text-center">
-                                            <h4 class="title mb-4">Inner Pages</h4>
-                                        </div>
-                                    </div>
+                        <div class="section-title text-center mb-4 pb-2">
+                            <!-- <h6 class="text-primary">Blogs</h6> -->
+                            <h4 class="title fw-semibold mt-2 mb-3">Modules</h4>
+                            <p class="text-muted para-desc mx-auto mb-0">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog blog-image blog-primary shadow rounded overflow-hidden">
+                            <div class="card-img">
+                                <img src="images/blog/img01.jpg" class="img-fluid" alt="">
+                                <div class="card-overlay"></div>
+
+                                <div class="position-absolute top-0 start-0 mt-3 ms-4">
+                                    <a href="javascript:void(0)" class="badge bg-light">Finance</a>
                                 </div>
                             </div>
+                            <div class="content px-4">
+                                <a href="blog-detail-one.html" class="h5 title d-block mb-0 text-white title-dark">How to Get a Successful Ad for Your Business</a>
+
+                                
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="feature-posts-placeholder bg-light"></div>
-            </div><!--end container-->
-        </section><!--end section-->
+                    </div><!--end col-->
 
-        <!-- Start -->
-        <section class="section bg-light pt-0">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="px-lg-5 mx-lg-5">
-                            <div class="row justify-content-center">
-                                <div class="col-12 text-center">
-                                    <div class="filters-group-wrap text-center">
-                                        <div class="filters-group">
-                                            <ul class="container-filter mb-0 categories-filter list-unstyled filter-options">
-                                                <li class="list-inline-item categories position-relative h5 fw-normal active" data-group="all">All</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="about">About</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="service">Services</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="portfolio">Portfolio</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="shop">Shop</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="blog">Blogs</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="contact">Contact</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="special">Special</li>
-                                                <li class="list-inline-item categories position-relative h5 fw-normal" data-group="p&f">Pricing & FAQs</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog blog-image blog-primary shadow rounded overflow-hidden">
+                            <div class="card-img">
+                                <img src="images/blog/img01.jpg" class="img-fluid" alt="">
+                                <div class="card-overlay"></div>
 
-                            <div id="grid" class="row">
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["about"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-aboutus.html" target="_blank">
-                                            <img src="images/demos/live/inner/about.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-aboutus.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">About us</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
+                                <div class="position-absolute top-0 start-0 mt-3 ms-4">
+                                    <a href="javascript:void(0)" class="badge bg-light">Finance</a>
+                                </div>
+                            </div>
+                            <div class="content px-4">
+                                <a href="blog-detail-one.html" class="h5 title d-block mb-0 text-white title-dark">How to Get a Successful Ad for Your Business</a>
+
                                 
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["service"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-services.html" target="_blank">
-                                            <img src="images/demos/live/inner/service.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-services.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Services</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["service"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-services-two.html" target="_blank">
-                                            <img src="images/demos/live/inner/service-two.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-services-two.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Services Two</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["service"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-single-service.html" target="_blank">
-                                            <img src="images/demos/live/inner/service-detail.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-single-service.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Service Detail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["shop"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="shop-grids.html" target="_blank">
-                                            <img src="images/demos/live/inner/shop.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="shop-grids.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Shop Products</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["shop"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="shop-product-detail.html" target="_blank">
-                                            <img src="images/demos/live/inner/shop-detail.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="shop-product-detail.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Product Detail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["shop"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="shop-cart.html" target="_blank">
-                                            <img src="images/demos/live/inner/cart.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="shop-cart.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Shop Cart</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["shop"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="shop-checkout.html" target="_blank">
-                                            <img src="images/demos/live/inner/checkout.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="shop-checkout.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Checkouts</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-grid.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-grid.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-grid.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog Grid</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-image-grid.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-image.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-image-grid.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Image Blogs</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-list.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-list.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-list.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog List</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-masonry.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-mesonry.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-masonry.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog Masonry</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-detail-two.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-detail-two.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-detail-two.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog Datail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-detail-three.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-detail-three.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-detail-three.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog Datail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-detail-four.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-detail-four.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-detail-four.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog Datail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["blog"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="blog-detail-five.html" target="_blank">
-                                            <img src="images/demos/live/inner/blog-detail-five.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="blog-detail-five.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Blog Datail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["p&f"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-pricing.html" target="_blank">
-                                            <img src="images/demos/live/inner/pricing.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-pricing.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Pricing</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["p&f"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-faqs.html" target="_blank">
-                                            <img src="images/demos/live/inner/faqs.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-faqs.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">FAQs</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["contact"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-contact.html" target="_blank">
-                                            <img src="images/demos/live/inner/contact.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-contact.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Contact Us</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["portfolio"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="portfolio-classic-three.html" target="_blank">
-                                            <img src="images/demos/live/inner/port-three.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="portfolio-classic-three.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Classic Portfolio</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["portfolio"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="portfolio-creative-four.html" target="_blank">
-                                            <img src="images/demos/live/inner/port-four.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="portfolio-creative-four.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Creative Portfolio</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["portfolio"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="portfolio-modern-five.html" target="_blank">
-                                            <img src="images/demos/live/inner/port-five.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="portfolio-modern-five.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Modern Portfolio</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["portfolio"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="portfolio-masonry-six.html" target="_blank">
-                                            <img src="images/demos/live/inner/port-six.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="portfolio-masonry-six.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Masonry Portfolio</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["portfolio"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="portfolio-detail-two.html" target="_blank">
-                                            <img src="images/demos/live/inner/port-detail-two.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="portfolio-detail-two.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Portfolio Detail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["portfolio"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="portfolio-detail-three.html" target="_blank">
-                                            <img src="images/demos/live/inner/port-detail-three.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="portfolio-detail-three.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Portfolio Detail</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["special"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-comingsoon.html" target="_blank">
-                                            <img src="images/demos/live/inner/comingsoon.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-comingsoon.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Comingsoon</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["special"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-maintenance.html" target="_blank">
-                                            <img src="images/demos/live/inner/maintenance.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-maintenance.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Maintenance</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-4 col-12 picture-item mt-100 mt-60" data-groups='["special"]'>
-                                    <div class="card portfolio portfolio-modern portfolio-primary px-md-2">
-                                        <a href="page-error.html" target="_blank">
-                                            <img src="images/demos/live/inner/error.png" class="img-fluid rounded shadow-md" alt="">
-                                        </a>
-                                        <div class="text-center pt-4">
-                                            <a href="page-error.html" target="_blank" class="text-dark fs-6 fw-medium mb-0 d-block title text-uppercase">Error</a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog blog-image blog-primary shadow rounded overflow-hidden">
+                            <div class="card-img">
+                                <img src="images/blog/img01.jpg" class="img-fluid" alt="">
+                                <div class="card-overlay"></div>
+
+                                <div class="position-absolute top-0 start-0 mt-3 ms-4">
+                                    <a href="javascript:void(0)" class="badge bg-light">Finance</a>
+                                </div>
+                            </div>
+                            <div class="content px-4">
+                                <a href="blog-detail-one.html" class="h5 title d-block mb-0 text-white title-dark">How to Get a Successful Ad for Your Business</a>
+
+                              
+                            </div>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
+
+
+
+
             </div><!--end container-->
         </section><!--end section-->
         <!-- End -->
 
-        <!-- Start -->
-        <section class="section" id="contact">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-5 col-12">
-                        <img src="images/demos/live/cell-phone.png" class="img-fluid" alt="">
-                    </div><!--end col-->
-
-                    <div class="col-lg-7 col-md-7 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        <div class="section-title ms-lg-5">
-                            <h4 class="gradient-text mb-4">Fully Responsive</h4>
-                            <h5 class="title mb-3">You can use <u>Starty</u> in all type of devices whether it is a tablet, mobile or desktop the size does not matter..</h5>
-                            <h5 class="text-muted para-desc fw-normal">Starty is fully responsive with all devices and fully managed by boostraps latest version.</h5>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </section><!--end section-->
-        <!--end-->
-  
         <!-- Footer Start -->
-        <footer class="footer bg-footer">            
-            <div class="footer-py-30 footer-bar bg-footer">
-                <div class="container text-center">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-sm-8">
-                            <div class="text-sm-start">
-                                <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Starty. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
-                            </div>
-                        </div><!--end col-->
-    
-                        <div class="col-sm-4 mt-4 mt-sm-0">
-                            <ul class="list-unstyled social-icon text-sm-end social mb-0">
-                                <li class="list-inline-item"><a href="https://1.envato.market/starty" target="_blank" class="rounded"><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
+        <footer class="footer bg-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-py-60">
+                            <div class="row">
+                                <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                                    <a href="#" class="logo-footer">
+                                        <img src="images/logo-light.png" height="28" alt="">
+                                    </a>
+                                    <p class="mt-4">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                                    <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                                        <li class="list-inline-item"><a href="https://1.envato.market/starty" target="_blank" class="rounded"><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
                                 <li class="list-inline-item"><a href="https://dribbble.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-dribbble align-middle" title="dribbble"></i></a></li>
                                 <li class="list-inline-item"><a href="https://www.behance.net/shreethemes" target="_blank" class="rounded"><i class="uil uil-behance" title="Behance"></i></a></li>
                                 <li class="list-inline-item"><a href="http://linkedin.com/company/shreethemes" target="_blank" class="rounded"><i class="uil uil-linkedin" title="Linkedin"></i></a></li>
@@ -1235,8 +876,58 @@
                                 <li class="list-inline-item"><a href="https://www.instagram.com/shreethemes/" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
                                 <li class="list-inline-item"><a href="https://twitter.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
                                 <li class="list-inline-item"><a href="mailto:support@shreethemes.in" class="rounded"><i class="uil uil-envelope align-middle" title="email"></i></a></li>
+                                
                                 <li class="list-inline-item"><a href="https://forms.gle/QkTueCikDGqJnbky9" target="_blank" class="rounded"><i class="uil uil-file align-middle" title="customization"></i></a></li>
-                            </ul>
+                                    </ul><!--end icon-->
+                                </div><!--end col-->
+                                
+                                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                    <h6 class="footer-head">Company</h6>
+                                    <ul class="list-unstyled footer-list mt-4">
+                                        <li><a href="page-aboutus.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> About us</a></li>
+                                        <li><a href="page-services-two.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Services</a></li>
+                                        <li><a href="page-team.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Team</a></li>
+                                        <li><a href="page-pricing.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Pricing</a></li>
+                                        <li><a href="blog-grid.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Blog</a></li>
+                                        <li><a href="portfolio-detail-four.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Project</a></li>
+                                    </ul>
+                                </div><!--end col-->
+                                
+                                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                    <h6 class="footer-head">Usefull Links</h6>
+                                    <ul class="list-unstyled footer-list mt-4">
+                                        <li><a href="index.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
+                                        <li><a href="index.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
+                                        <li><a href="page-contact.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Contact Us</a></li>
+                                        <li><a href="index.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Changelog</a></li>
+                                        <li><a href="page-elements.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Components</a></li>
+                                    </ul>
+                                </div><!--end col-->
+
+                                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                    <h6 class="footer-head">Newsletter</h6>
+                                    <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                                    
+                                    <div class="subcribe-form footer-subscribe">
+                                        <form>
+                                            <input name="email" id="email2" type="email" class="form-control rounded-pill shadow" placeholder="Email :" required>
+                                            <button type="submit" class="btn btn-pills btn-icon btn-primary"><i class="uil uil-search"></i></button>
+                                        </form><!--end form-->
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+            <div class="footer-py-30 footer-bar bg-footer">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="text-center">
+                                <p class="mb-0 text-muted"><script>document.write(new Date().getFullYear())</script> © Starty. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+                            </div>
                         </div><!--end col-->
                     </div><!--end row-->
                 </div><!--end container-->
@@ -1245,36 +936,23 @@
         <!-- End -->
 
         <!-- Back to top -->
-        <div class="position-fixed" style="bottom: 20px; left: 20px; z-index: 1;">
-            <a href="https://forms.gle/QkTueCikDGqJnbky9" class="d-flex" target="_blank">
-                <span class="btn btn-pills btn-icon btn-lg btn-primary"><i data-feather="file" class="fea icon-sm icons align-middle"></i></span>
-                <span class="shadow-md px-2 py-1 m-auto ms-2 rounded bg-white text-dark">Customization</span>
-            </a>
-        </div>  
-        <a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill"><i class="mdi mdi-arrow-up"></i></a>
+        <ul class="text-center list-unstyled switcher-button mb-0 position-fixed" style="top: 20%; left: 10px; z-index: 2;">
+            <li class="d-grid"><a href="javascript:void(0)" class="btn btn-icon rounded-circle btn-dark dark-version t-dark" onclick="setTheme('style-dark')"> <i class="uil uil-moon fs-5"></i> </a></li>
+            <li class="d-grid"><a href="javascript:void(0)" class="btn btn-icon rounded-circle btn-dark light-version t-light" onclick="setTheme('style')"> <i class="uil uil-sun fs-5"></i> </a></li>
+            <li class="d-grid"><a href="https://1.envato.market/starty" target="_blank" class="btn btn-icon rounded-circle btn-primary mt-2"> <i class="uil uil-shopping-cart fs-5"></i> </a></li>
+        </ul>
+<a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill"><i class="mdi mdi-arrow-up"></i></a>
         <!-- Back to top -->
-    
 
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/gumshoe.polyfills.min.js"></script>
-        <script src="js/shuffle.min.js"></script>
-        <script src="js/contact.js"></script>
+        <script src="js/swiper.min.js"></script>
         <script src="js/parallax.js"></script>
-        <script src="js/typed.js"></script>
+        <script src="js/tobii.min.js"></script>
+        <script src="js/tiny-slider.js"></script>
         <script src="js/feather.min.js"></script>
         <!-- Main Js -->
         <script src="js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
         <script src="js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
-        <script>
-            var typed = new Typed('#typed', {
-                stringsElement: '#typed-strings',
-                typeSpeed: 200,
-                loop: true,
-                strings: [
-                    'Startup Business', 'Corporate Business', 'Finance', 'Application', 'Saas', 'SEO Agency', 'Digital Marketing', 'Marketing', 'Product Launch', 'Restaurent', 'Coffee & Cafe', 'Personal', 'Minimal Portfolio', 'Developer', 'Personal Blog', 'Charity', 'Event Management', 'e-Commerce', '',
-                ],
-            });
-        </script>
     </body>
 </html>
