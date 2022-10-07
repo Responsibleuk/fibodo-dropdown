@@ -5173,3 +5173,15 @@ p {
 .align-middle{
   margin: auto;
 }
+
+
+
+/* feature */
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
