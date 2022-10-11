@@ -480,6 +480,10 @@ video:focus {
   text-align: center;
 }
 
+.features-text {
+  max-width: 600px;
+}
+
 @media (max-width: 767px) {
   .pt-sm-150 {
     padding-top: 200px;
@@ -1875,6 +1879,11 @@ button:not(:disabled) {
 .fea.icon-lg {
   height: 42px;
   width: 42px;
+}
+
+.icon-vlg {
+  height: 200px;
+  width: 200px;
 }
 
 .fea.icon-ex-lg {
