@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Modules</title>
+    <title>Golf | fibodo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
     <meta name="keywords" content="Startup, Business, Multi-uses, HTML, Clean, Modern, Creative" />
@@ -13,8 +13,9 @@
     <meta name="Version" content="v1.0.0" />
     <!-- favicon -->
     <link href="images/favicon.ico" rel="shortcut icon">
-    <!-- Bootstrap -->
+    <!-- Bootstrap and other css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
     <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
     <link href="css/tiny-slider.css" rel="stylesheet" type="text/css" />
     <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
@@ -29,12 +30,12 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html">
+            <a class="logo" href="golf-home.html">
                 <span class="logo-light-mode">
-                    <img src="images/logo-dark.png" class="l-dark" alt="">
-                    <img src="images/logo-light.png" class="l-light" alt="">
+                    <img src="images/golf-logo-dark.png" class="l-dark" alt="">
+                    <img src="images/golf-logo-light.png" class="l-light" alt="">
                 </span>
-                <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+                <img src="images/golf-logo-light.png" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -72,245 +73,169 @@
 
             <div id="navigation">
                 <!-- Navigation Menu-->
-                <ul class="navigation-menu nav-right nav-light">
+                <ul class="navigation-menu nav-light">
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
+                        <a href="javascript:void(0)">Features</a><span class="menu-arrow"></span>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
                                     <li>
-                                        <a href="index-startup.html" class="sub-menu-item">
+                                        <a href="features.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/startup.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i>
-                                                    Startups</span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-calender icon-vlg h1"></i></span>
+                                                <span class="mt-lg-2 d-block">
+                                                    Client Booking Management</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="index-business.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/business.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-window-grid icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
                                                         class="uil uil-presentation-line menu-list-icon align-middle me-1"></i>
-                                                    Business</span>
+                                                    Marketplaces</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="index-corporate.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/corporate.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-chart-pie menu-list-icon align-middle me-1"></i>
-                                                    Corporate</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-finance.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/finance.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-analytics menu-list-icon align-middle me-1"></i>
-                                                    Finance</span>
-                                            </div>
-                                        </a>
-                                    </li>
+
+                                    
+
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
                                     <li>
-                                        <a href="index-application.html" class="sub-menu-item">
+                                        <a href="index-startup.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/application.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-mobile-android menu-list-icon align-middle me-1"></i>
-                                                    Application</span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-presentation-line icon h1"></i></span>
+                                                <span class="mt-lg-2 d-block">
+                                                        Live Revenue Management</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="index-saas.html" class="sub-menu-item">
+                                        <a href="index-business.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/saas.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-briefcase-alt icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-airplay menu-list-icon align-middle me-1"></i>
-                                                    Saas</span>
+                                                        class="uil uil-presentation-line menu-list-icon align-middle me-1"></i>
+                                                        Reporting</span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    
+
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="index-startup.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-wallet icon h1"></i></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i>
+                                                        Wallet Manager</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="index-seo.html" class="sub-menu-item">
+                                        <a href="index-business.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/seo.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-window-grid icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-clapper-board menu-list-icon align-middle me-1"></i>
-                                                    SEO Agency</span>
+                                                        class="uil uil-presentation-line menu-list-icon align-middle me-1"></i>
+                                                        Real-time channel management</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="index-marketing.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/marketing.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-process menu-list-icon align-middle me-1"></i>
-                                                    Marketing</span>
-                                            </div>
-                                        </a>
-                                    </li>
+
+                                    
+
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
                                     <li>
-                                        <a href="index-event.html" class="sub-menu-item">
+                                        <a href="index-startup.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/event.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-window-grid icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-post-stamp menu-list-icon align-middle me-1"></i>
-                                                    Event</span>
+                                                        class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i>
+                                                        Tailored App </span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="index-crypto.html" class="sub-menu-item">
+                                        <a href="index-business.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/crypto.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-window-grid icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-bitcoin-circle menu-list-icon align-middle me-1"></i>
-                                                    Cryptocurrency</span>
+                                                        class="uil uil-presentation-line menu-list-icon align-middle me-1"></i>
+                                                        Multi Activity Packaging</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="index-restaurant.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/restaurant.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-restaurant menu-list-icon align-middle me-1"></i>
-                                                    Restaurant</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-cafe.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/cafe.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-coffee menu-list-icon align-middle me-1"></i>
-                                                    Cafe</span>
-                                            </div>
-                                        </a>
-                                    </li>
+
+                                   
+
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
                                     <li>
-                                        <a href="index-personal.html" class="sub-menu-item">
+                                        <a href="index-startup.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/personal.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-window-grid icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-user menu-list-icon align-middle me-1"></i>
-                                                    Personal</span>
+                                                        class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i>
+                                                        Social ranking and client communications</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="index-portfolio.html" class="sub-menu-item">
+                                        <a href="index-business.html" class="sub-menu-item">
                                             <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/portfolio.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="d-none d-lg-block">
+                                                    <i class="uil uil-window-grid icon h1"></i></span>
                                                 <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-image-v menu-list-icon align-middle me-1"></i>
-                                                    Portfolio</span>
+                                                        class="uil uil-presentation-line menu-list-icon align-middle me-1"></i>
+                                                        Courses and multi experience packages</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="index-freelancer.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/freelancer.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-brackets-curly menu-list-icon align-middle me-1"></i>
-                                                    Freelancer</span>
-                                            </div>
-                                        </a>
-                                    </li>
+
+                                    
+
                                 </ul>
                             </li>
 
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="index-charity.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/charity.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-thumbs-up menu-list-icon align-middle me-1"></i>
-                                                    Charity</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-personal-blog.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/blog.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-document-layout-left menu-list-icon align-middle me-1"></i>
-                                                    Personal Blog</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-fashion.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/fashion.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-shopping-bag menu-list-icon align-middle me-1"></i>
-                                                    fashion</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-onepage.html" class="sub-menu-item">
-                                            <div class="text-lg-center">
-                                                <span class="d-none d-lg-block"><img src="images/demos/application.png"
-                                                        class="img-fluid rounded shadow-md" alt=""></span>
-                                                <span class="mt-lg-2 d-block"><i
-                                                        class="uil uil-book menu-list-icon align-middle me-1"></i> App
-                                                    (Onepage)</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                            
+
+
+
+
+
                         </ul>
                     </li>
+
+                    <li><a href="#apps" class="sub-menu-item">Apps</a></li>
 
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
@@ -350,124 +275,147 @@
                         </ul>
                     </li>
 
+
+
+
+
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Portfolio</a><span class="menu-arrow"></span>
+                        <a href="javascript:void(0)">Modules</a><span class="menu-arrow"></span>
                         <ul class="submenu megamenu">
+                            <div>
+                            <h4>Do we need a bit of text</h4>
+                        </div>
                             <li>
+                                
+                                
                                 <ul>
-                                    <li class="megamenu-head">Classic Portfolio</li>
-                                    <li><a href="portfolio-classic-two.html" class="sub-menu-item">Two Column</a></li>
-                                    <li><a href="portfolio-classic-three.html" class="sub-menu-item">Three Column</a>
+                                    
+                        
+                                    <li>
+                                        <a href="module-coach.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/1.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-briefcase-alt menu-list-icon align-middle me-1"></i>
+                                                    Coach</span>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li><a href="portfolio-classic-four.html" class="sub-menu-item">Four Column</a></li>
-                                    <li><a href="portfolio-classic-five.html" class="sub-menu-item">Five Column</a></li>
-                                    <li><a href="portfolio-classic-six.html" class="sub-menu-item">Six Column</a></li>
-                                    <li><a href="portfolio-classic-sidebar.html" class="sub-menu-item">Portfolio
-                                            Sidebar</a></li>
+                                    <li>
+                                        <a href="index-business.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/2.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-presentation-line menu-list-icon align-middle me-1"></i>
+                                                    Accademy</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
-                                    <li class="megamenu-head">Creative Portfolio</li>
-                                    <li><a href="portfolio-creative-two.html" class="sub-menu-item">Two Column</a></li>
-                                    <li><a href="portfolio-creative-three.html" class="sub-menu-item">Three Column</a>
+                                    <li>
+                                        <a href="index-application.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/3.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-mobile-android menu-list-icon align-middle me-1"></i>
+                                                        Driving Range</span>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li><a href="portfolio-creative-four.html" class="sub-menu-item">Four Column</a>
+                                    <li>
+                                        <a href="index-saas.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/4.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-airplay menu-list-icon align-middle me-1"></i>
+                                                        Buggies</span>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li><a href="portfolio-creative-five.html" class="sub-menu-item">Five Column</a>
-                                    </li>
-                                    <li><a href="portfolio-creative-six.html" class="sub-menu-item">Six Column</a></li>
-                                    <li><a href="portfolio-creative-sidebar.html" class="sub-menu-item">Portfolio
-                                            Sidebar</a></li>
+                                    
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
-                                    <li class="megamenu-head">Modern Portfolio</li>
-                                    <li><a href="portfolio-modern-two.html" class="sub-menu-item">Two Column</a></li>
-                                    <li><a href="portfolio-modern-three.html" class="sub-menu-item">Three Column</a>
+                                    <li>
+                                        <a href="index-corporate.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/5.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-chart-pie menu-list-icon align-middle me-1"></i>
+                                                    Tee Sheets</span>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li><a href="portfolio-modern-four.html" class="sub-menu-item">Four Column</a></li>
-                                    <li><a href="portfolio-modern-five.html" class="sub-menu-item">Five Column</a></li>
-                                    <li><a href="portfolio-modern-six.html" class="sub-menu-item">Six Column</a></li>
-                                    <li><a href="portfolio-modern-sidebar.html" class="sub-menu-item">Portfolio
-                                            Sidebar</a></li>
+                                    <li>
+                                        <a href="index-finance.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/6.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-analytics menu-list-icon align-middle me-1"></i>
+                                                    Adventure golf</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
-                                    <li class="megamenu-head">Masonry Portfolio</li>
-                                    <li><a href="portfolio-masonry-two.html" class="sub-menu-item">Two Column</a></li>
-                                    <li><a href="portfolio-masonry-three.html" class="sub-menu-item">Three Column</a>
+                                    <li>
+                                        <a href="index-marketing.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/7.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-process menu-list-icon align-middle me-1"></i>
+                                                        Membership</span>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li><a href="portfolio-masonry-four.html" class="sub-menu-item">Four Column</a></li>
-                                    <li><a href="portfolio-masonry-five.html" class="sub-menu-item">Five Column</a></li>
-                                    <li><a href="portfolio-masonry-six.html" class="sub-menu-item">Six Column</a></li>
-                                    <li><a href="portfolio-masonry-sidebar.html" class="sub-menu-item">Portfolio
-                                            Sidebar</a></li>
+                                    
                                 </ul>
                             </li>
 
                             <li>
                                 <ul>
-                                    <li class="megamenu-head">Portfolio Detail</li>
-                                    <li><a href="portfolio-detail-one.html" class="sub-menu-item">Portfolio One</a></li>
-                                    <li><a href="portfolio-detail-two.html" class="sub-menu-item">Portfolio Two</a></li>
-                                    <li><a href="portfolio-detail-three.html" class="sub-menu-item">Portfolio Three</a>
+                                    <li>
+                                        <a href="index-seo.html" class="sub-menu-item">
+                                            <div class="text-lg-center">
+                                                <span class="d-none d-lg-block"><img src="images/demos/8.jpg"
+                                                        class="img-fluid rounded shadow-md" alt=""></span>
+                                                <span class="mt-lg-2 d-block"><i
+                                                        class="uil uil-clapper-board menu-list-icon align-middle me-1"></i>
+                                                        Retail</span>
+                                            </div>
+                                        </a>
                                     </li>
-                                    <li><a href="portfolio-detail-four.html" class="sub-menu-item">Portfolio Four</a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Blogs</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Blog</a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="blog-grid.html" class="sub-menu-item">Blog Grids</a></li>
-                                    <li><a href="blog-masonry.html" class="sub-menu-item">Blog Masonry</a></li>
-                                    <li><a href="blog-list.html" class="sub-menu-item">Blog List</a></li>
-                                    <li><a href="blog-grid-sidebar.html" class="sub-menu-item">Blog-Sidebar</a></li>
-                                    <li><a href="blog-masonry-sidebar.html" class="sub-menu-item">Blog
-                                            Masonry-sidebar</a></li>
-                                    <li><a href="blog-list-sidebar.html" class="sub-menu-item">Blog List-Sidebar</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Image Blog</a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="blog-image-grid.html" class="sub-menu-item">Blog Grids</a></li>
-                                    <li><a href="blog-image-masonry.html" class="sub-menu-item">Blog Masonry</a></li>
-                                    <li><a href="blog-image-grid-sidebar.html" class="sub-menu-item">Blog-Sidebar</a>
-                                    </li>
-                                    <li><a href="blog-image-masonry-sidebar.html" class="sub-menu-item">Blog
-                                            Masonry-sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Blog Detail </a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="blog-detail-one.html" class="sub-menu-item">Blog Detail One</a></li>
-                                    <li><a href="blog-detail-two.html" class="sub-menu-item">Blog Detail Two</a></li>
-                                    <li><a href="blog-detail-three.html" class="sub-menu-item">Blog Detail Three</a>
-                                    </li>
-                                    <li><a href="blog-detail-four.html" class="sub-menu-item">Blog Detail Four</a></li>
-                                    <li><a href="blog-detail-five.html" class="sub-menu-item">Blog Detail Five</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blog-author.html" class="sub-menu-item">Author</a></li>
-                        </ul>
-                    </li>
+
+
+
 
                     <li><a href="page-contact.html" class="sub-menu-item">Contact us</a></li>
+                    <li><a href="features.html" class="sub-menu-item">Features</a></li>
+                    <li><a href="modules.html" class="sub-menu-item">Modules</a></li>
                 </ul>
                 <!--end navigation menu-->
             </div>
@@ -877,186 +825,104 @@
     <!--end section-->
     <!-- End -->
 
-    <!-- Footer Start -->
-    <footer class="footer bg-footer">
-        <div class="py-5 footer-border-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <div class="section-title">
-                            <div class="d-flex">
-                                <i class="uil uil-envelope-star display-4 text-white title-dark"></i>
-                                <div class="flex-1 ms-md-4 ms-3">
-                                    <h4 class="fw-bold text-light title-dark mb-1">Subscribe to our newsletters</h4>
-                                    <p class="text-white-50 mb-0">Sign up and receive the latest tips via email.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
+   <!-- Footer Start -->
+   <footer class="footer bg-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="footer-py-60">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 order-4 order-md-1">
+                            <ul class="list-unstyled social-icon foot-social-icon mb-0">
+                                <li class="list-inline-item"><a href="https://1.envato.market/starty" target="_blank" class="rounded"><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
+                        <li class="list-inline-item"><a href="https://dribbble.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-dribbble align-middle" title="dribbble"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.behance.net/shreethemes" target="_blank" class="rounded"><i class="uil uil-behance" title="Behance"></i></a></li>
+                        <li class="list-inline-item"><a href="http://linkedin.com/company/shreethemes" target="_blank" class="rounded"><i class="uil uil-linkedin" title="Linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/shreethemes/" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="mailto:support@shreethemes.in" class="rounded"><i class="uil uil-envelope align-middle" title="email"></i></a></li>
+                        
+                        <li class="list-inline-item"><a href="https://forms.gle/QkTueCikDGqJnbky9" target="_blank" class="rounded"><i class="uil uil-file align-middle" title="customization"></i></a></li>
+                            </ul><!--end icon-->
+                        </div><!--end col-->
 
-                    <div class="col-md-4 mt-4 mt-sm-0">
-                        <div class="text-md-end ms-5 ms-sm-0">
-                            <a href="javascript:void(0)" class="btn btn-primary">Subscribe Now</a>
-                        </div>
-                    </div>
-                    <!--end col-->
+                        <div class="col-lg-3 col-md-3 col-12 order-1 order-md-2">
+                            <h6 class="footer-head">Company</h6>
+                            <ul class="list-unstyled footer-list mt-4">
+                                <li><a href="page-aboutus.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> About us</a></li>
+                                <li><a href="page-services-two.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Services</a></li>
+                                <li><a href="page-team.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Team</a></li>
+                                <li><a href="page-pricing.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Pricing</a></li>
+                                <li><a href="blog-grid.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Blog</a></li>
+                                <li><a href="portfolio-detail-four.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Project</a></li>
+                            </ul>
+                        </div><!--end col-->
+                        
+                        <div class="col-lg-3 col-md-3 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-3">
+                            <h6 class="footer-head">Usefull Links</h6>
+                            <ul class="list-unstyled footer-list mt-4">
+                                <li><a href="index.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
+                                <li><a href="index.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
+                                <li><a href="page-contact.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Contact Us</a></li>
+                                <li><a href="index.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Changelog</a></li>
+                                <li><a href="page-elements.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Components</a></li>
+                            </ul>
+                        </div><!--end col-->
+
+                        <div class="col-lg-3 col-md-3 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 order-3 order-md-4">
+                            <h6 class="footer-head">Resources</h6>
+                            <ul class="list-unstyled footer-list mt-4">
+                                <li><a href="page-faqs.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Theme guide</a></li>
+                                <li><a href="page-faqs.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Support desk</a></li>
+                                <li><a href="page-services.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> What we offer</a></li>
+                                <li><a href="page-aboutus.html" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Company history</a></li>
+                            </ul>
+                        </div><!--end col-->
+                    </div><!--end row-->
                 </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </div>
-        <!--end div-->
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
 
+    <div class="footer-py-30 footer-bar bg-footer">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-py-60">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 order-4 order-md-1">
-                                <ul class="list-unstyled social-icon foot-social-icon mb-0">
-                                    <li class="list-inline-item"><a href="https://1.envato.market/starty"
-                                            target="_blank" class="rounded"><i
-                                                class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
-                                    <li class="list-inline-item"><a href="http://linkedin.com/company/shreethemes"
-                                            target="_blank" class="rounded"><i class="uil uil-linkedin"
-                                                title="Linkedin"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.facebook.com/shreethemes"
-                                            target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle"
-                                                title="facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.instagram.com/shreethemes/"
-                                            target="_blank" class="rounded"><i class="uil uil-instagram align-middle"
-                                                title="instagram"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://twitter.com/shreethemes"
-                                            target="_blank" class="rounded"><i class="uil uil-twitter align-middle"
-                                                title="twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="mailto:support@shreethemes.in"
-                                            class="rounded"><i class="uil uil-envelope align-middle"
-                                                title="email"></i></a></li>
-
-                                    <li class="list-inline-item"><a href="https://forms.gle/QkTueCikDGqJnbky9"
-                                            target="_blank" class="rounded"><i class="uil uil-file align-middle"
-                                                title="customization"></i></a></li>
-                                </ul>
-                                <!--end icon-->
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-3 col-md-3 col-12 order-1 order-md-2">
-                                <h6 class="footer-head">Company</h6>
-                                <ul class="list-unstyled footer-list mt-4">
-                                    <li><a href="page-aboutus.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> About us</a></li>
-                                    <li><a href="page-services-two.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Services</a></li>
-                                    <li><a href="page-team.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Team</a></li>
-                                    <li><a href="page-pricing.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Pricing</a></li>
-                                    <li><a href="blog-grid.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Blog</a></li>
-                                    <li><a href="portfolio-detail-four.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Project</a></li>
-                                </ul>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-3 col-md-3 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-3">
-                                <h6 class="footer-head">Usefull Links</h6>
-                                <ul class="list-unstyled footer-list mt-4">
-                                    <li><a href="index.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
-                                    <li><a href="index.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
-                                    <li><a href="page-contact.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Contact Us</a></li>
-                                    <li><a href="index.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Changelog</a></li>
-                                    <li><a href="page-elements.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Components</a></li>
-                                </ul>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-3 col-md-3 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 order-3 order-md-4">
-                                <h6 class="footer-head">Resources</h6>
-                                <ul class="list-unstyled footer-list mt-4">
-                                    <li><a href="page-faqs.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Theme guide</a></li>
-                                    <li><a href="page-faqs.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Support desk</a></li>
-                                    <li><a href="page-services.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> What we offer</a></li>
-                                    <li><a href="page-aboutus.html" class="text-foot"><i
-                                                class="uil uil-angle-right-b me-1"></i> Company history</a></li>
-                                </ul>
-                            </div>
-                            <!--end col-->
-                        </div>
-                        <!--end row-->
+            <div class="row align-items-center">
+                <div class="col-sm-4">
+                    <div class="text-sm-start text-center">
+                        <a href="#">
+                            <img src="images/logo-light.png" height="26" alt="">
+                        </a>
                     </div>
-                </div>
-                <!--end col-->
-            </div>
-            <!--end row-->
-        </div>
-        <!--end container-->
+                </div><!--end col-->
 
-        <div class="footer-py-30 footer-bar bg-footer">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-sm-4">
-                        <div class="text-sm-start text-center">
-                            <a href="#">
-                                <img src="images/logo-light.png" height="26" alt="">
-                            </a>
-                        </div>
+                <div class="col-sm-8 mt-4 mt-sm-0">
+                    <div class="text-sm-end text-center">
+                        <p class="mb-0 text-muted"><script>document.write(new Date().getFullYear())</script> © fibodo. Designed with <i class="mdi mdi-heart text-danger"></i> by <a href="https://storyx.co.uk" target="_blank" class="text-reset">StoryX</a>.</p>
                     </div>
-                    <!--end col-->
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </div>
+</footer><!--end footer-->
+<!-- End -->
 
-                    <div class="col-sm-8 mt-4 mt-sm-0">
-                        <div class="text-sm-end text-center">
-                            <p class="mb-0 text-muted">
-                                <script>document.write(new Date().getFullYear())</script> © Starty. Design with <i
-                                    class="mdi mdi-heart text-danger"></i> by <a href="https://shreethemes.in/"
-                                    target="_blank" class="text-reset">Shreethemes</a>.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </div>
-    </footer>
-    <!--end footer-->
-    <!-- End -->
+<!-- Back to top -->
+<ul class="text-center list-unstyled switcher-button mb-0 position-fixed" style="top: 20%; left: 10px; z-index: 2;">
+    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-icon rounded-circle btn-dark dark-version t-dark" onclick="setTheme('style-dark')"> <i class="uil uil-moon fs-5"></i> </a></li>
+    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-icon rounded-circle btn-dark light-version t-light" onclick="setTheme('style')"> <i class="uil uil-sun fs-5"></i> </a></li>
+    <li class="d-grid"><a href="https://1.envato.market/starty" target="_blank" class="btn btn-icon rounded-circle btn-primary mt-2"> <i class="uil uil-shopping-cart fs-5"></i> </a></li>
+</ul>
+<a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill"><i class="mdi mdi-arrow-up"></i></a>
+<!-- Back to top -->
 
-    <!-- Back to top -->
-    <ul class="text-center list-unstyled switcher-button mb-0 position-fixed" style="top: 20%; left: 10px; z-index: 2;">
-        <li class="d-grid"><a href="javascript:void(0)" class="btn btn-icon rounded-circle btn-dark dark-version t-dark"
-                onclick="setTheme('style-dark')"> <i class="uil uil-moon fs-5"></i> </a></li>
-        <li class="d-grid"><a href="javascript:void(0)"
-                class="btn btn-icon rounded-circle btn-dark light-version t-light" onclick="setTheme('style')"> <i
-                    class="uil uil-sun fs-5"></i> </a></li>
-        <li class="d-grid"><a href="https://1.envato.market/starty" target="_blank"
-                class="btn btn-icon rounded-circle btn-primary mt-2"> <i class="uil uil-shopping-cart fs-5"></i> </a>
-        </li>
-    </ul>
-    <a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill"><i
-            class="mdi mdi-arrow-up"></i></a>
-    <!-- Back to top -->
 
-    <!-- javascript -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/feather.min.js"></script>
-    <!-- Main Js -->
-    <script src="js/plugins.init.js"></script>
-    <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
-    <script src="js/app.js"></script>
-    <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+<!-- javascript -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/tiny-slider.js"></script>
+<script src="js/feather.min.js"></script>
+<!-- Main Js -->
+<script src="js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+<script src="js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
 </body>
-
 </html>
